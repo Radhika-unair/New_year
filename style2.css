@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background: url('bc.jpg') no-repeat; /* Add your image path here */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
+.menu-container {
+    display: flex; /* Activates flexbox */
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 120px; /* Space between menu items */
+    height: 100vh; /* Makes the container fill the viewport height */
+    text-align: center; /* Ensures text stays centered */
+}
+
+.menu-item {
+    width: 300px;
+    height: 100px;
+    padding: 15px 0; /* Adjusts padding: top and bottom */
+    background-color: #f43dae;
+    border: 2px solid #e8ede8;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #f4f1f1; /* Text color */
+    text-align: center;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    margin: 0; /* Removes extra margins */
+    line-height: 70px; /* Adjusts vertical alignment of text */
+}
+
+
+
+.menu-item:hover {
+    background-color: #c1096e;
+    transform: scale(1.05);
+}
+
+.menu-item:active {
+    transform: scale(0.95);
+}
+
+#pre-loader{
+    background: #fdfcfc url(load4.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+}

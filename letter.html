@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENEVELOPE</title>
+    <link rel="stylesheet" href="letterstyle_main.css" />
+  </head>
+  <body>
+    <div id="pre-loader"></div>
+    <div id="card">
+      <a href="letter_inside.html"><div class="heart"></div></a>
+      <a href="letter_inside.html"> <div class="heart1"></div></a>
+      <a href="letter_inside.html"> <div class="heart2"></div></a>
+      <a href="letter_inside.html"> <div class="heart3"></div></a>
+      <a href="letter_inside.html"> <div class="heart4"></div></a>
+    </div>
+
+    <div class="text">
+      <h1>~I have Something for you!!!~</h1>
+      <br />
+      
+    </div>
+    <script>
+      // Pre-loader functionality
+      var loader = document.getElementById("pre-loader");
+      window.addEventListener("load", function() {
+          setTimeout(function() {
+              loader.style.display = "none";
+          }, 1500);
+      });
+
+      // Navigation function
+      function navigateTo(page) {
+          window.location.href = page; // Redirects to the specified page
+      }
+  </script>
+  </body>
+</html>

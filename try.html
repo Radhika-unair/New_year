@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensures compatibility with older versions of Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(230, 16, 166);
+            position: absolute;
+            top: 10px; /* Adjust vertical position */
+            left: 50%; /* Centers horizontally */
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+            align-items: center; /* Center text horizontally */
+        }
+
+        #timer-date {
+            font-size: 52px;
+            font-weight: bold;
+            margin-bottom: 5px; /* Space between date and countdown */
+        }
+
+        #timer-countdown {
+            font-size: 32px;
+            color: white; /* White font */
+            background-color: rgba(217, 67, 145, 0.8); /* Semi-transparent black box */
+            padding: 10px 20px; /* Padding for better readability */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <div id="pre-loader"></div>
+
+    <!-- Timer placed above the menu elements -->
+    <div id="timer">
+        <div id="timer-date">Since October 18</div>
+        <div id="timer-countdown">Loading...</div>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-item" onclick="navigateTo('index.html')">Quiz</div>
+        <div class="menu-item" onclick="navigateTo('question.html')">Question</div>
+        <div class="menu-item" onclick="navigateTo('letter.html')">Letter</div>
+    </div>
+
+    <script>
+        // Pre-loader functionality
+        var loader = document.getElementById("pre-loader");
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                loader.style.display = "none";
+            }, 1500);
+        });
+
+        // Navigation function
+        function navigateTo(page) {
+            window.location.href = page; // Redirects to the specified page
+        }
+
+        // Count-up timer functionality
+        function startCountUp(startDate) {
+            const countdownElement = document.getElementById("timer-countdown");
+
+            function updateTimer() {
+                const now = new Date();
+                const elapsed = now - startDate; // Difference in milliseconds
+                const seconds = Math.floor(elapsed / 1000);
+                const days = Math.floor(seconds / (24 * 3600));
+                const hours = Math.floor((seconds % (24 * 3600)) / 3600);
+                const minutes = Math.floor((seconds % 3600) / 60);
+                const secs = seconds % 60;
+
+                // Update the countdown display
+                countdownElement.textContent = `${days} Days: ${hours.toString().padStart(2, '0')} Hours: ${minutes.toString().padStart(2, '0')} Minutes: ${secs.toString().padStart(2, '0')} Seconds`;
+            }
+
+            updateTimer(); // Initial call to display timer immediately
+            setInterval(updateTimer, 1000); // Update every second
+        }
+
+        
+        const startDate = new Date("2024-10-18T00:00:00");
+        startCountUp(startDate);
+    </script>
+</body>
+</html>

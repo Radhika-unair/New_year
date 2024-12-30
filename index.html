@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Specifies the character encoding for the document -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensures compatibility with older versions of Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures the website is responsive on all devices -->
+    <title>LOVE QUIZ</title>
+    <!-- Title of the webpage -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the external CSS file for styling -->
+</head>
+
+<body>
+    <div id="pre-loader"></div>
+
+    <main class="main">
+        <!-- Main content container -->
+        <header class="header">
+            <!-- Header section -->
+            <!-- <a href="#" class="logo">Quiz.</a>
+            
+
+            <nav class="navbar">
+                
+                <a href="#" class="active">Home</a>
+                
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+               
+            </nav> -->
+        </header>
+
+        <div class="container">
+            <!-- Main container for the content -->
+
+            <section class="quiz-section">
+                <!-- Section for the quiz -->
+                <div class="quiz-box">
+                    <!-- Container for the quiz content -->
+                    <h1>LOVE QUIZ</h1>
+                    <div class="quiz-header">
+                        <!-- Header inside the quiz box -->
+                        <span>LOVE RELATED QUESTIONS</span>
+                        <!-- Title or description -->
+                        <span class="header-score">Score: 0 / 5 </span>
+                        <!-- Initial score display -->
+                    </div>
+
+                    <h2 class="question-text">1. Sample Question Text</h2>
+                    <!-- Placeholder for a question -->
+
+                    <div class="option-list">
+                        <!-- Placeholder for answer options -->
+                        <!-- Uncomment the below options for a functional quiz -->
+                        <!--
+                        <div class="option">
+                            <span>A</span>
+                        </div>
+                        <div class="option">
+                            <span>B</span>
+                        </div>
+                        <div class="option">
+                            <span>C</span>
+                        </div>
+                        <div class="option">
+                            <span>D</span>
+                        </div>
+                        -->
+                    </div>
+
+                    <div class="quiz-footer">
+                        <!-- Footer section of the quiz -->
+                        <span class="question-total">1 of 5 Questions</span>
+                        <!-- Current question number out of total -->
+                        <button class="next-btn">Next</button>
+                        <!-- Button to go to the next question -->
+                    </div>
+                </div>
+
+                <div class="result-box">
+                    <!-- Section to display the result -->
+                    <h2>Quiz Result!</h2>
+                    <div class="percentage-container">
+                        <!-- Container for percentage and score -->
+                        <div class="circular-progress">
+                            <!-- Circular progress bar -->
+                            <span class="progress-value">0%</span>
+                            <!-- Current percentage value -->
+                        </div>
+
+                        <span class="score-text">Your Score 0 out of 5</span>
+                        <!-- Final score display -->
+                    </div>
+
+                    <div class="buttons">
+                        <!-- Action buttons after the result -->
+                        <button class="tryAgain-btn">Try Again</button>
+                        <!-- Button to restart the quiz -->
+                        <button class="goHome-btn">Go To Home</button>
+                        <!-- Button to return to the home page -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="home">
+                <!-- Section for the home content -->
+                <div class="home-content">
+                    <h1>LOVE QUIZ</h1>
+                    <!-- Main heading -->
+                    <p>Welcome to the quiz!!</p>
+                    <p>Are you ready for the quiz?</p>
+                    <!-- Description of the quiz -->
+                    <button class="start-btn">Start Quiz</button>
+                    <!-- Button to begin the quiz -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="popup-info">
+        <!-- Popup section for quiz guide -->
+        <h2>Quiz Guide</h2>
+        <!-- Title for the guide -->
+        <span class="info">1. Understand the Topic</span>
+        <span class="info">2. Reflect on Your Own Experiences</span>
+        <span class="info">3. Read Each Question Carefully and Calmly</span>
+        <span class="info">4. Take Your Time</span>
+        <span class="info">5. Remember no matter what the result is I will always love You!!</span>
+        <!-- Guide points or instructions -->
+
+        <div class="btn-group">
+            <!-- Buttons for popup actions -->
+            <button class="info-btn exit-btn">Exit Quiz</button>
+            <!-- Button to exit the quiz -->
+            <a href="#" class="info-btn continue-btn">Continue</a>
+            <!-- Button to proceed -->
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <!-- Link to the external JavaScript file for handling quiz questions -->
+    <script src="script1.js"></script>
+    <!-- Link to the external JavaScript file for general functionality -->
+
+    <script>
+        // Pre-loader functionality
+        var loader = document.getElementById("pre-loader");
+        window.addEventListener("load", function() {
+            setTimeout(function() {
+                loader.style.display = "none";
+            }, 1500);
+        });
+
+        // Navigation function
+        function navigateTo(page) {
+            window.location.href = page; // Redirects to the specified page
+        }
+    </script>
+</body>
+
+</html>
